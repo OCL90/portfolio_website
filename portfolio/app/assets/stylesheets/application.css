@@ -65,8 +65,91 @@
 .about_me_paragraph{
   margin: 15px 0px;
 }
-.skills, .projects{
-  height: 300px;
+#skills{
+  font-family: 'Sriracha', cursive;
+  padding: 20px;
+}
+#skills img{
+  width: 100px; height: 100px;
+  margin: 20px;
+}
+.each_skill{
+  display: inline-block;
+}
+.each_skill p{
+  margin: 0px;
+}
+#web_fundamentals_title{
+  font-family: 'Lobster', cursive;
+  margin-top: 110px;
+}
+#ruby_on_rails_title{
+  font-family: 'Lobster', cursive;
+  margin-top: 110px;
+}
+#mean_title{
+  font-family: 'Lobster', cursive;
+  margin-top: 110px;
+}
+#python_title{
+  font-family: 'Lobster', cursive;
+  margin-top: 110px;
+}
+#dotnet_title{
+  font-family: 'Lobster', cursive;
+  margin-top: 110px;
+}
+#web_fundamentals, #ruby_on_rails, #mean, #python, #dotnet{
+  padding: 20px;
+}
+.slideanim {
+  visibility: hidden;
+}
+.fadeIn{
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn; 
+
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-in-out; 
+  -webkit-animation-timing-function: ease-in-out;   
+
+  visibility: visible !important; 
+}
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0.0;   
+  }
+  60% {
+    transform: scale(1.1);  
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1; 
+  } 
+  100% {
+    transform: scale(1);
+    opacity: 1; 
+  }   
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;   
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    opacity: 1; 
+  } 
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1; 
+  }   
 }
 #contact_me{
   background-color: #F0F0F0;
@@ -183,7 +266,12 @@ footer{
 table{
   margin-top: 20px;
 }
-
+.jumbotron{
+  margin-bottom: 10px;
+}
+#login button{
+  margin-bottom: 20px;
+}
 #logout{
   margin-top: 10px;
   padding-right: 30px;

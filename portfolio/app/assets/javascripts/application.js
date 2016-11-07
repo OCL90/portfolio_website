@@ -15,23 +15,33 @@
 //= require turbolinks
 //= require_tree .
 
-  $(document).ready(function(){
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 150) {
-          $('.direct_top').fadeIn();
-      } else {
-          $('.direct_top').fadeOut();
-      }
-    });
-    $(".navbar a, footer a").on('click', function(event) {
-      if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-        window.location.hash = hash;
-        });
-      }
-    })
+$(document).ready(function(){
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 150) {
+        $('.direct_top').fadeIn();
+    } else {
+        $('.direct_top').fadeOut();
+    }
   });
+  $(".navbar a, footer a").on('click', function(event) {
+    if (this.hash !== "") {
+    event.preventDefault();
+    var hash = this.hash;
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+      window.location.hash = hash;
+      });
+    }
+  });
+  $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("fadeIn");
+          }
+      });
+    });
+});
