@@ -1,0 +1,138 @@
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about_me">ABOUT ME</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact_me">CONTACT ME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid intro" id="about_me">
+  <div class="row about_me">
+    <div class="col-lg-12 text-center image">
+      <h1>Oscar Cortazar-Luebbert</h1>
+      <%= image_tag("profile_pic.png", :alt => "Profile Picture") %>
+    </div>
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="col-lg-12 about_me_paragraph">
+        <p>I am a petroleum engineer and web developer currently living in Irving, Texas. My interests range from technology to oil and gas. Driven, self-sufficient web application developer motivated to solve programming challenges. As a recent graduate from Coding Dojo, I worked in collaborative team environments to build many web applications in various programming languages using different databases.</p>
+        <p>Prior to coding, my professional contributions focused around problem solving and process optimization efforts for the oil and gas industry. This experience and the demands of Texas Tech allowed me to adopt the ‘get’er done’ mentality that drives me to deliver the results.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="skills"></div>
+<div class="projects"></div>
+<div class="col-lg-12" id="contact_me">
+  <div class="row">
+    <div class="col-lg-7">
+      <div class="row">
+        <div class="col-lg-12 text-center contact_title">
+          <h2><%= image_tag("black_email.png", :alt => "black_email") %> GET IN TOUCH WITH ME</h2>
+          <h4>Need a website? A web application? I am available for freelance work, I want to hear about your projects.</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" id="form">
+          <form class="col-lg-10 col-lg-offset-4" action="/clients" method="post">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <div class="form-group row">
+              <label for="example-text-input" class="col-lg-1 col-xs-3 col-form-label">Name:</label>
+              <div class="col-lg-5 col-xs-9">
+                <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-lg-1 col-xs-3 col-form-label">Email:</label>
+              <div class="col-lg-5 col-xs-9">
+                <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-lg-1 col-xs-3 col-form-label">Subject:</label>
+              <div class="col-lg-5 col-xs-9">
+                <input type="text" name="subject" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-lg-1 col-xs-3 col-form-label">Message:</label>
+              <div class="col-lg-5 col-xs-9">
+                <textarea class="form-control" name="message" id="exampleTextarea" rows="3" placeholder="Message..."></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xs-12 col-lg-6 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+              <% if flash[:success]%>
+                <p class="success"><%= flash[:success] %><p>
+              <% end %>
+              <% if flash[:errors]%>
+                <% flash[:errors].each do |e|%>
+                  <p class="errors"><%= e %><p>
+                <% end %>
+              <% end %>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 google_map">
+      <div id="irving_map"></div>
+    </div>
+  </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcH9F1fBaHQZFarAjp2zjreVTy9V-3WOg" type="text/javascript"></script>
+<!-- Irving_Map -->
+<script>
+var myCenter1 = new google.maps.LatLng(32.9359, -96.9585);
+
+function initialize() {
+var mapProp1 = {
+center:myCenter1,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map1 = new google.maps.Map(document.getElementById("irving_map"),mapProp1);
+
+var marker1 = new google.maps.Marker({
+position:myCenter1,
+});
+
+marker1.setMap(map1);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<footer class="container-fluid col-lg-12">
+  <div class="row">
+    <div class="col-lg-4 text-center links">
+      <ul class="list-inline">
+        <li><a href="https://www.linkedin.com/in/oscarcort"><%= image_tag("linkedin.png", :alt => "LinkedIn") %></a></li>
+        <li><a href="https://github.com/OCL90"><%= image_tag("github.png", :alt => "GitHub") %></a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4 col-lg-offset-4 text-center">
+      <div class="row">
+        <div class="col-lg-12" id="developed_by">
+          <h5 class="col-lg-8 col-lg-offset-4 col-xs-8">Developed by <a href="/admin">Oscar Cortazar-Luebbert</a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="back-to-top" href="#about_me" class="btn btn-primary btn-lg direct_top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    
+</footer>

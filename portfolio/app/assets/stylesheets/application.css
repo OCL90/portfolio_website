@@ -1,0 +1,193 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.navbar-custom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  background-color: #0E518D;
+  z-index: 9999;
+  border: 0;
+  font-size: 13px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.navbar li a{
+  color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #446ec9 !important;
+  background-color: #0E518D;
+}
+.navbar-nav li a:focus{
+  background-color: #0E518D;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: white;
+}
+#about_me{
+  padding-top: 100px;
+  padding-bottom: 20px;
+  background-color: #0E518D;
+  color: #ffffff;
+}
+.about_me img{
+  height: 250px; width: 250px;
+}
+.about_me{
+  font-family: 'Sriracha', cursive;
+}
+.about_me .image{
+  margin-bottom: 10px;
+}
+.about_me .img-circle{
+  border: 3px solid black
+}
+.about_me p{
+  font-size: 22px;
+  font-family: 'Kalam', cursive;
+}
+.about_me_paragraph{
+  margin: 15px 0px;
+}
+.skills, .projects{
+  height: 300px;
+}
+#contact_me{
+  background-color: #F0F0F0;
+  font-family: 'Sriracha', cursive;
+}
+.contact_title img{
+  height: 60px;
+  margin-right: 15px;
+}
+.contact_title{
+  margin: 15px 0px;
+}
+#irving_map{
+  height:400px;
+}
+.google_map{
+  margin: 15px 0px;
+}
+form .btn, form .btn:hover, form .btn:active:focus{
+  width: 130px;
+  border: none;
+  background: #EE5750;
+}
+form .btn:focus, form .btn:active:focus, form .btn.active:focus,
+form .btn.focus, form .btn:active.focus, form .btn.active.focus {
+    outline: none;
+}
+form .success{
+  color: green;
+}
+form .errors{
+  color: red;
+}
+footer{
+  background-color: #0E518D;
+  padding: 25px;
+  height: 150px;
+  color: white;
+  font-family: 'Architects Daughter', cursive;
+}
+.links img{
+  height: 40px; width: 40px;
+}
+.links ul li{
+  margin: 0px 15px;
+}
+#developed_by a{
+  color: white;
+}
+.direct_top{
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display:none;
+}
+.direct_top span{
+  color: #ffffff;
+}
+.slideUp{
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;  
+
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;     
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  50%{
+    transform: translateY(-8%);
+  }
+  65%{
+    transform: translateY(4%);
+  }
+  80%{
+    transform: translateY(-4%);
+  }
+  95%{
+    transform: translateY(2%);
+  }     
+  100% {
+    transform: translateY(0%);
+  } 
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+  50%{
+    -webkit-transform: translateY(-8%);
+  }
+  65%{
+    -webkit-transform: translateY(4%);
+  }
+  80%{
+    -webkit-transform: translateY(-4%);
+  }
+  95%{
+    -webkit-transform: translateY(2%);
+  }     
+  100% {
+    -webkit-transform: translateY(0%);
+  } 
+}
+table{
+  margin-top: 20px;
+}
+
+#logout{
+  margin-top: 10px;
+  padding-right: 30px;
+}
+#logout button a{
+  color: white;
+}
