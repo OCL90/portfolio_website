@@ -2,10 +2,6 @@ class AdminsController < ApplicationController
   def index
   end
 
-  def home
-    redirect_to "/"
-  end
-
   def login
     admin = Admin.find_by(email: params[:email])
     if admin && admin.authenticate(params[:password])

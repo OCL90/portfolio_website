@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
+$( document ).on('turbolinks:load', function(){
   $(window).scroll(function() {
     if ($(this).scrollTop() > 150) {
         $('.direct_top').fadeIn();
@@ -45,12 +45,6 @@ $(document).ready(function(){
         }
     });
   });
-
-  function reloadPage(){
-    if(!reload){
-      window.location.replace(window.location+"?reload=true");
-    }
-  }
-  reloadPage();
+  
 
 });

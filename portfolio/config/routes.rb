@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   root 'clients#index'
 
-  get 'start' => 'admins#home'
-
   post 'clients' => 'clients#create'
 
   get 'admin' => 'admins#index'
