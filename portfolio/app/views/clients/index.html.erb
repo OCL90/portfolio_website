@@ -9,10 +9,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about_me">ABOUT ME</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#contact_me">CONTACT ME</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#about_me">ABOUT ME</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#skills">SKILLS</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#projects">PROJECTS</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#contact_me">CONTACT ME</a></li>
       </ul>
     </div>
   </div>
@@ -25,189 +25,209 @@
     </div>
     <div class="col-lg-6 col-lg-offset-3">
       <div class="col-lg-12 about_me_paragraph">
-        <p>I am a petroleum engineer and web developer currently living in Irving, Texas. My interests range from technology to oil and gas. Driven, self-sufficient web application developer motivated to solve programming challenges. As a recent graduate from Coding Dojo, I worked in collaborative team environments to build many web applications in various programming languages using different databases.</p>
+        <p>I am a petroleum engineer and full stack web developer currently living in Irving, Texas. My interests range from technology to oil and gas. Driven, self-sufficient web application developer motivated to solve programming challenges. As a recent graduate from Coding Dojo, I worked in collaborative team environments to build many web applications in various programming languages using different databases.</p>
         <p>Prior to coding, my professional contributions focused around problem solving and process optimization efforts for the oil and gas industry. This experience and the demands of Texas Tech allowed me to adopt the "get’er done" mentality that drives me to deliver the results.</p>
       </div>
     </div>
   </div>
 </div>
 <div class="col-lg-12" id="skills">
-  <div class="col-lg-12 text-center slideanim" id="web_fundamentals">
-    <div class="col-lg-6 col-md-push-6" id="web_fundamentals_title">
-      <h1>Web Fundamentals</h1>
-    </div>
-    <div class="col-lg-6 col-md-pull-6">
-      <div class="each_skill">
-        <p><%= image_tag("html.png", :alt => "HTML5") %></p>
-        <p>HTML5</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("css.png", :alt => "CSS3") %></p>
-        <p>CSS3</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("jquery.png", :alt => "jQuery") %></p>
-        <p>jQuery</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("api.png", :alt => "API") %></p>
-        <p>API</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("ajax.png", :alt => "AJAX") %></p>
-        <p>AJAX</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("json.png", :alt => "JSON") %></p>
-        <p>JSON</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("git.png", :alt => "GitHub") %></p>
-        <p>GitHub</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("rwd.png", :alt => "RWD") %></p>
-        <p>RWD</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("wireframes.png", :alt => "Wireframes") %></p>
-        <p>Wireframs</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("bootstrap.png", :alt => "Boostrap") %></p>
-        <p>Bootstrap</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-12 text-center slideanim" id="ruby_on_rails">
-    <div class="col-lg-6" id="ruby_on_rails_title">
-      <h1>Ruby on Rails</h1>
-    </div>
-    <div class="col-lg-6">
-      <div class="each_skill">
-        <p><%= image_tag("ruby.png", :alt => "Ruby") %></p>
-        <p>Ruby</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("rails.png", :alt => "Rails") %></p>
-        <p>Rails</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("tdd.png", :alt => "TDD") %></p>
-        <p>TDD</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("oop.png", :alt => "OOP") %></p>
-        <p>OOP</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("MVC.png", :alt => "MVC") %></p>
-        <p>MVC</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("postgresql.png", :alt => "PostgreSQL") %></p>
-        <p>PostgreSQL</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("restful.png", :alt => "RESTful") %></p>
-        <p>RESTful</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("aws.png", :alt => "AWS") %></p>
-        <p>AWS</p>
+  <div class="row">
+    <div class="col-lg-12 text-center" id="web_fundamentals">
+      <div class="row slideanim">
+        <div class="col-lg-6 col-md-push-6" id="web_fundamentals_title">
+          <h1>Web Fundamentals</h1>
+        </div>
+        <div class="col-lg-6 col-md-pull-6">
+          <div class="each_skill">
+            <p><%= image_tag("html.png", :alt => "HTML5") %></p>
+            <p>HTML5</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("css.png", :alt => "CSS3") %></p>
+            <p>CSS3</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("jquery.png", :alt => "jQuery") %></p>
+            <p>jQuery</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("api.png", :alt => "API") %></p>
+            <p>API</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("ajax.png", :alt => "AJAX") %></p>
+            <p>AJAX</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("json.png", :alt => "JSON") %></p>
+            <p>JSON</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("git.png", :alt => "GitHub") %></p>
+            <p>GitHub</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("rwd.png", :alt => "RWD") %></p>
+            <p>RWD</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("wireframes.png", :alt => "Wireframes") %></p>
+            <p>Wireframs</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("bootstrap.png", :alt => "Boostrap") %></p>
+            <p>Bootstrap</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-12 text-center slideanim" id="mean">
-    <div class="col-lg-6 col-md-push-6" id="mean_title">
-      <h1>MEAN</h1>
-    </div>
-    <div class="col-lg-6 col-md-pull-6">
-      <div class="each_skill">
-        <p><%= image_tag("js.png", :alt => "JavaScript") %></p>
-        <p>JavaScript</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("mongo.png", :alt => "MongoDB") %></p>
-        <p>MongoDB</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("express.png", :alt => "Express") %></p>
-        <p>Express</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("angular.png", :alt => "AngularJS") %></p>
-        <p>AngularJS</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("nodejs.png", :alt => "Node.js") %></p>
-        <p>Node.js</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("oop.png", :alt => "OOP") %></p>
-        <p>OOP</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("MVC.png", :alt => "MVC") %></p>
-        <p>MVC</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("restful.png", :alt => "RESTful") %></p>
-        <p>RESTful</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("aws.png", :alt => "AWS") %></p>
-        <p>AWS</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-12 text-center slideanim" id="python">
-    <div class="col-lg-6" id="python_title">
-      <h1>Python</h1>
-    </div>
-    <div class="col-lg-6">
-      <div class="each_skill">
-        <p><%= image_tag("python.png", :alt => "Python") %></p>
-        <p>Python</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("flask.png", :alt => "Flask") %></p>
-        <p>Flask</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("python_oop.png", :alt => "Python_OOP") %></p>
-        <p>OOP</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("pylotmvc.png", :alt => "Pylot_MVC") %></p>
-        <p>MVC</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("mysql.png", :alt => "MySQL") %></p>
-        <p>MySQL</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("restful.png", :alt => "RESTful") %></p>
-        <p>RESTful</p>
-      </div>
-      <div class="each_skill">
-        <p><%= image_tag("aws.png", :alt => "AWS") %></p>
-        <p>AWS</p>
+  <div class="row">
+    <div class="col-lg-12 text-center" id="ruby_on_rails">
+      <div class="row slideanim">
+        <div class="col-lg-6" id="ruby_on_rails_title">
+          <h1>Ruby on Rails</h1>
+        </div>
+        <div class="col-lg-6">
+          <div class="each_skill">
+            <p><%= image_tag("ruby.png", :alt => "Ruby") %></p>
+            <p>Ruby</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("rails.png", :alt => "Rails") %></p>
+            <p>Rails</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("tdd.png", :alt => "TDD") %></p>
+            <p>TDD</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("oop.png", :alt => "OOP") %></p>
+            <p>OOP</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("MVC.png", :alt => "MVC") %></p>
+            <p>MVC</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("postgresql.png", :alt => "PostgreSQL") %></p>
+            <p>PostgreSQL</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("restful.png", :alt => "RESTful") %></p>
+            <p>RESTful</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("aws.png", :alt => "AWS") %></p>
+            <p>AWS</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-12 text-center slideanim" id="dotnet">
-    <div class="col-lg-6 col-md-push-6" id="dotnet_title">
-      <h1>C#/.NET (Currently Learning)</h1>
-    </div>
-    <div class="col-lg-6 col-md-pull-6">
-      <div class="each_skill">
-        <p><%= image_tag("net_icon.png", :alt => ".NET") %></p>
-        <p>.NET</p>
+  <div class="row">
+    <div class="col-lg-12 text-center" id="mean">
+      <div class="row slideanim">
+        <div class="col-lg-6 col-md-push-6" id="mean_title">
+          <h1>MEAN</h1>
+        </div>
+        <div class="col-lg-6 col-md-pull-6">
+          <div class="each_skill">
+            <p><%= image_tag("js.png", :alt => "JavaScript") %></p>
+            <p>JavaScript</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("mongo.png", :alt => "MongoDB") %></p>
+            <p>MongoDB</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("express.png", :alt => "Express") %></p>
+            <p>Express</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("angular.png", :alt => "AngularJS") %></p>
+            <p>AngularJS</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("nodejs.png", :alt => "Node.js") %></p>
+            <p>Node.js</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("oop.png", :alt => "OOP") %></p>
+            <p>OOP</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("MVC.png", :alt => "MVC") %></p>
+            <p>MVC</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("restful.png", :alt => "RESTful") %></p>
+            <p>RESTful</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("aws.png", :alt => "AWS") %></p>
+            <p>AWS</p>
+          </div>
+        </div>
       </div>
-      <div class="each_skill">
-        <p><%= image_tag("c_sharp_icon.png", :alt => "C#") %></p>
-        <p>C#</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center" id="python">
+      <div class="row slideanim">
+        <div class="col-lg-6" id="python_title">
+          <h1>Python</h1>
+        </div>
+        <div class="col-lg-6">
+          <div class="each_skill">
+            <p><%= image_tag("python.png", :alt => "Python") %></p>
+            <p>Python</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("flask.png", :alt => "Flask") %></p>
+            <p>Flask</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("python_oop.png", :alt => "Python_OOP") %></p>
+            <p>OOP</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("pylotmvc.png", :alt => "Pylot_MVC") %></p>
+            <p>MVC</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("mysql.png", :alt => "MySQL") %></p>
+            <p>MySQL</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("restful.png", :alt => "RESTful") %></p>
+            <p>RESTful</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("aws.png", :alt => "AWS") %></p>
+            <p>AWS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center" id="dotnet">
+      <div class="row slideanim">
+        <div class="col-lg-6 col-md-push-6" id="dotnet_title">
+          <h1>C#/.NET (Currently Learning)</h1>
+        </div>
+        <div class="col-lg-6 col-md-pull-6">
+          <div class="each_skill">
+            <p><%= image_tag("net_icon.png", :alt => ".NET") %></p>
+            <p>.NET</p>
+          </div>
+          <div class="each_skill">
+            <p><%= image_tag("c_sharp_icon.png", :alt => "C#") %></p>
+            <p>C#</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -274,7 +294,7 @@
     </div>
   </div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcH9F1fBaHQZFarAjp2zjreVTy9V-3WOg" type="text/javascript"></script>
+
 <!-- Irving_Map -->
 <script>
 var myCenter1 = new google.maps.LatLng(32.9359, -96.9585);

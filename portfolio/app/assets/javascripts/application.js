@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -29,19 +30,27 @@ $(document).ready(function(){
     var hash = this.hash;
     $('html, body').animate({
       scrollTop: $(hash).offset().top
-    }, 900, function(){
+    }, 1500, function(){
       window.location.hash = hash;
-      });
+    });
     }
   });
   $(window).scroll(function() {
-      $(".slideanim").each(function(){
-        var pos = $(this).offset().top;
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
 
-        var winTop = $(window).scrollTop();
-          if (pos < winTop + 600) {
-            $(this).addClass("fadeIn");
-          }
-      });
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 700) {
+          $(this).addClass("fadeIn");
+        }
     });
+  });
+
+  function reloadPage(){
+    if(!reload){
+      window.location.replace(window.location+"?reload=true");
+    }
+  }
+  reloadPage();
+
 });
