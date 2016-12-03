@@ -17,6 +17,7 @@
 //= require_tree .
 
 $( document ).on('turbolinks:load', function(){
+  var google_api_key = "AIzaSyDLdwDtNNeGVkM_r2xwHXltp9qRBSa4uvI";
   $(window).scroll(function() {
     if ($(this).scrollTop() > 150) {
         $('.direct_top').fadeIn();
